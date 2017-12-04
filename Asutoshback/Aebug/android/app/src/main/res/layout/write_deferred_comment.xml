@@ -1,0 +1,80 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/deff"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/confirm"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="12sp"
+        android:paddingLeft="15dp"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:paddingRight="15dp"
+        android:textColor="@color/blue"
+        android:text="Are you sure you want to mark it as Deferred ? "/>
+        <EditText
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:padding="10dp"
+            android:layout_below="@+id/confirm"
+            android:id="@+id/commnt"
+            android:background="@drawable/addcomment_edit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="@color/colorBlack"
+            android:minHeight="90dp"
+            android:textSize="12sp"
+            android:gravity="top"
+            android:textColorHint="@color/gray"
+            android:hint="Write a comment here..." />
+
+    <TextView
+        android:layout_below="@+id/commnt"
+        android:id="@+id/errorempty"
+        android:paddingTop="10dp"
+        android:visibility="gone"
+        android:textColor="@color/urgent"
+        android:paddingLeft="15dp"
+        android:text="Writing commnet is mandatory !"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+
+    <LinearLayout
+        android:layout_below="@+id/errorempty"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:gravity="center"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:weightSum="2"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/yes"
+            android:text="Yes"
+            android:background="@color/blue"
+            android:textColor="@color/colorWhite"
+            android:textSize="12sp"
+            android:layout_margin="2dp"
+            android:layout_weight="1"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+        <Button
+            android:id="@+id/no"
+            android:text="No"
+            android:textSize="12sp"
+            android:background="@color/blue"
+            android:layout_weight="1"
+            android:layout_margin="2dp"
+            android:textColor="@color/colorWhite"
+            android:textAllCaps="false"
+            android:layout_width="wrap_content"
+            android:layout_height="40dp" />
+    </LinearLayout>
+
+</RelativeLayout>

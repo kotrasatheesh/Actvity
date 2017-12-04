@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:background="@drawable/custom_bg"
+
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/listRelt"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/bodyContent"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/ticketIDlay"
+            android:padding="2dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/IdTag"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textSize="13sp"
+                android:text="Ticket ID :"/>
+            <TextView
+                android:id="@+id/ticketId"
+                android:layout_toRightOf="@id/IdTag"
+                android:textSize="13sp"
+                android:paddingLeft="10dp"
+                android:text="I1234i56657365"
+                android:textStyle="bold"
+                android:layout_width="120dp"
+                android:layout_height="wrap_content" />
+
+            <TextView
+                android:id="@+id/cteateddate"
+                android:layout_alignParentRight="true"
+                android:text=""
+                android:gravity="right"
+                android:textSize="10sp"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    <RelativeLayout
+        android:layout_below="@+id/ticketIDlay"
+        android:id="@+id/tltlay"
+        android:padding="2dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/issueTitle"
+            android:text="adfasdf"
+            android:textSize="13sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/tltlay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:paddingLeft="2dp"
+                android:id="@+id/assing"
+                android:paddingTop="1dp"
+                android:paddingBottom="2dp"
+                android:layout_alignParentLeft="true"
+                android:gravity="left"
+                android:textSize="12sp"
+                android:maxLines="5"
+                android:text="cv,am,p1,12,dsf,df"
+                android:layout_toLeftOf="@+id/modifiedTag"
+                android:layout_width="180dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/modifiedTag"
+                android:text="Modified On:"
+                android:layout_alignBottom="@+id/assing"
+                android:layout_toLeftOf="@+id/modifedDate"
+                android:textSize="10sp"
+                android:gravity="center"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/modifedDate"
+                android:layout_alignParentRight="true"
+                android:layout_centerHorizontal="true"
+                android:layout_alignBottom="@+id/assing"
+                android:gravity="center"
+                android:paddingLeft="5dp"
+                android:text="one sec two days there ljfdfjljadfj  "
+                android:textSize="10sp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@+id/bodyContent"
+            android:paddingTop="5dp"
+            android:paddingBottom="5dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            android:layout_marginBottom="5dp"
+            android:id="@+id/headerContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/status"
+                android:gravity="center"
+                android:textSize="13sp"
+                android:background="@drawable/status"
+                android:text=""
+                android:textColor="@color/colorWhite"
+                android:layout_width="105dp"
+                android:layout_height="20dp"
+                android:layout_alignParentLeft="true"
+                />
+            <TextView
+                android:id="@+id/environment"
+                android:layout_width="105dp"
+                android:gravity="center"
+                android:layout_height="20dp"
+                android:background="@drawable/environment"
+                android:textSize="12sp"
+                android:textColor="@color/colorWhite"
+                android:layout_centerHorizontal="true"
+                android:text=""/>
+
+            <TextView
+                android:id="@+id/priority"
+                android:layout_alignParentRight="true"
+                android:background="@drawable/priority"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:text=""
+                android:layout_width="105dp"
+                android:layout_height="20dp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+    <View
+        android:layout_alignParentBottom="true"
+        android:background="#eee"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"></View>
+</RelativeLayout>

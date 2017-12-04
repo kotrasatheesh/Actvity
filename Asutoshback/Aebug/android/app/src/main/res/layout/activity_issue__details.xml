@@ -1,0 +1,323 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:id="@+id/issueDetailLay"
+    android:layout_height="match_parent"
+    tools:context="com.example.asutosh.aebug.Issue_DetailsActivity">
+    <RelativeLayout
+        android:background="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:id="@+id/nointernet_lay"
+            android:background="@mipmap/no_internet"
+            android:layout_width="match_parent"
+            android:translationZ="3dp"
+            android:visibility="gone"
+            android:clickable="true"
+            android:layout_height="match_parent">
+            <TextView
+                android:textSize="20sp"
+                android:padding="10dp"
+                android:layout_marginBottom="30dp"
+                android:textColor="@color/colorBlack"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:layout_above="@+id/retry"
+                android:text="No Internet Connection !"
+                android:layout_height="wrap_content" />
+            <Button
+                android:layout_alignParentBottom="true"
+                android:id="@+id/retry"
+                android:textAllCaps="false"
+                android:background="@drawable/retry"
+                android:text="Retry"
+                android:elevation="0dp"
+                android:layout_marginBottom="100dp"
+                android:textColor="@color/input"
+                android:layout_centerHorizontal="true"
+                android:layout_width="150dp"
+                android:layout_height="wrap_content" />
+            <ProgressBar
+                android:id="@+id/eprogressBar"
+                android:visibility="gone"
+                android:layout_marginBottom="40dp"
+                android:layout_alignParentBottom="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true" />
+        </RelativeLayout>
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+            <android.support.v7.widget.Toolbar
+                android:id="@+id/detail_toolbar"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="?attr/actionBarSize"
+                app:layout_collapseMode="pin"
+                android:fitsSystemWindows="true"
+                app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+            </android.support.v7.widget.Toolbar>
+
+
+    </android.support.design.widget.AppBarLayout>
+        <RelativeLayout
+            android:id="@+id/preload"
+            android:layout_below="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone"
+            android:gravity="center"
+            android:translationZ="1dp"
+            android:background="@color/colorWhite">
+            <ProgressBar
+                android:id="@+id/progressBar1"
+                style="@style/Theme.Transparent"
+                android:layout_width="wrap_content"
+                android:translationZ="1dp"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="100dp" />
+        </RelativeLayout>
+        <ScrollView
+            android:layout_below="@+id/appbar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="50dp">
+
+<RelativeLayout
+    android:id="@+id/body"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+<RelativeLayout
+    android:id="@+id/ticketDetailsLay"
+    android:background="@color/colorWhite"
+    android:paddingBottom="10dp"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:id="@+id/idTag"
+        android:typeface="serif"
+        android:textStyle="bold"
+        android:text="ID :"/>
+    <TextView
+        android:layout_toRightOf="@+id/idTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:textSize="12sp"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/ticketID"
+        android:typeface="serif"
+        android:text="afsdfasd"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:padding="10dp"
+        android:textSize="14sp"
+        android:textColor="@color/colorBlack"
+        android:id="@+id/TicketType"
+        android:typeface="serif"
+        android:text="fasdfasdf"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_alignParentRight="true"
+        android:layout_marginLeft="10dp"
+        android:textSize="12sp"
+        android:id="@+id/reported_date"
+        android:textColor="@color/colorBlack"
+        android:text="fadsfasdf"/>
+
+    <TextView
+        android:layout_below="@+id/idTag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="asdfasdfadfsfasd"
+        android:textColor="@color/colorBlack"
+        android:padding="8dp"
+        android:id="@+id/issue_title"/>
+    <View
+        android:id="@+id/view2"
+        android:layout_below="@+id/issue_title"
+        android:layout_margin="10dp"
+        android:background="#ccc"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"></View>
+    <RelativeLayout
+        android:id="@+id/statuslay"
+        android:layout_below="@+id/view2"
+        android:layout_width="match_parent"
+        android:gravity="center"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/Dpriority"
+            android:background="@drawable/priority_edit_drawable"
+            android:layout_width="110dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_height="30dp"
+            android:textSize="11sp"
+            android:gravity="center"
+            android:text=""/>
+        <TextView
+            android:id="@+id/Dstatus"
+            android:layout_toRightOf="@+id/Dpriority"
+            android:background="@drawable/status_edit_details"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textSize="11sp"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text=""/>
+        <TextView
+            android:id="@+id/Darea"
+            android:layout_toRightOf="@+id/Dstatus"
+            android:background="@drawable/environment_edit_drawable"
+            android:textSize="10sp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_width="110dp"
+            android:layout_height="30dp"
+            android:gravity="center"
+            android:text=""/>
+    </RelativeLayout>
+    <View
+        android:id="@+id/view3"
+        android:layout_below="@+id/statuslay"
+        android:layout_margin="10dp"
+        android:background="#ccc"
+        android:layout_width="match_parent"
+        android:layout_height="0.2dp"></View>
+    <TextView
+        android:id="@+id/D_description"
+        android:layout_below="@+id/view3"
+        android:text="adfasdfasdfasdf"
+        android:textColor="@color/colorBlack"
+        android:padding="8dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
+<RelativeLayout
+    android:id="@+id/uploaedimgLay"
+    android:layout_below="@+id/ticketDetailsLay"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+    <TextView
+        android:id="@+id/UploadimgTag"
+        android:padding="8dp"
+        android:textSize="14sp"
+        android:background="#eee"
+        android:textStyle="bold"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="File Attachements"/>
+    <View
+        android:layout_below="@id/UploadimgTag"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/colorWhite"></View>
+    <RelativeLayout
+        android:id="@+id/recyLay"
+        android:layout_below="@+id/UploadimgTag"
+        android:layout_width="match_parent"
+        android:background="@color/colorWhite"
+        android:layout_height="wrap_content">
+
+        <android.support.v7.widget.RecyclerView
+            xmlns:android="http://schemas.android.com/apk/res/android"
+            android:id="@+id/recyclerView_loadImg"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:scrollbars="none" />
+    </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/commentsLay"
+        android:layout_below="@+id/uploaedimgLay"
+        android:layout_width="match_parent"
+        android:background="#eee"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/commentTag"
+            android:padding="8dp"
+            android:textSize="14sp"
+            android:textStyle="bold"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Comments"/>
+
+
+        </RelativeLayout>
+    <View
+        android:layout_below="@id/commentsLay"
+        android:layout_width="match_parent"
+        android:layout_height="0.3dp"
+        android:background="@color/colorWhite"></View>
+    <ListView
+        android:layout_below="@+id/commentsLay"
+        android:divider="@android:color/transparent"
+        android:dividerHeight="0dp"
+        android:drawSelectorOnTop="true"
+        android:background="@color/colorWhite"
+        android:id="@+id/commentListview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+    </ListView>
+    </RelativeLayout>
+
+        </ScrollView>
+        <RelativeLayout
+            android:layout_alignParentBottom="true"
+            android:layout_width="match_parent"
+            android:background="@color/gray"
+            android:maxHeight="100dp"
+            android:padding="2dp"
+            android:layout_height="wrap_content">
+            <LinearLayout
+                android:orientation="horizontal"
+                android:weightSum="10"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <EditText
+                    android:layout_width="0dp"
+                    android:layout_weight="8.5"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:textSize="20sp"
+                    android:minHeight="45dp"
+                    android:maxHeight="100dp"
+                    android:hint="Add comment.."
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/addcomment_edit"
+                    android:id="@+id/addcomment"/>
+                <TextView
+                    android:id="@+id/sendbtn"
+                    android:layout_centerVertical="true"
+                    android:gravity="center"
+                    android:layout_weight="1.5"
+                    android:layout_width="0dp"
+                    android:textStyle="bold"
+                    android:textColor="#0082d9"
+                    android:layout_height="match_parent"
+                    android:text="Send"/>
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+</RelativeLayout>
+
+</RelativeLayout>

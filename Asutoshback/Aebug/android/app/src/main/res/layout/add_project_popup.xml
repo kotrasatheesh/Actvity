@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rel"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:layout_gravity="center_horizontal"
+    android:background="@drawable/dialog_corners">
+
+    <TextView
+        android:id="@+id/titleTag"
+        android:background="@color/colorPrimary"
+        android:text="Add project"
+        android:paddingLeft="10dp"
+        android:textSize="18sp"
+        android:gravity="left|center_vertical"
+        android:textColor="@color/colorWhite"
+        android:layout_width="match_parent"
+        android:layout_height="55dp" />
+    <ScrollView
+        android:layout_below="@+id/titleTag"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/firstLayout">
+            <EditText
+                android:id="@+id/pro_name"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:hint="Project Name"
+                android:textColorHint="@color/gray"
+                android:layout_margin="10dp"
+                android:background="@drawable/addticket_input"
+                android:layout_height="wrap_content" />
+            <EditText
+                android:id="@+id/pro_description"
+                android:layout_below="@+id/pro_name"
+                android:layout_width="match_parent"
+                android:padding="10dp"
+                android:minHeight="100dp"
+                android:gravity="top"
+                android:maxHeight="300dp"
+                android:hint="Description.."
+                android:textColorHint="@color/gray"
+                android:layout_margin="10dp"
+                android:background="@drawable/addticket_input"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:layout_below="@+id/pro_description"
+                android:id="@+id/errorMsg"
+                android:textColor="#FF0000"
+                android:paddingLeft="10dp"
+                android:text=""
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+            <RelativeLayout
+                android:layout_below="@+id/errorMsg"
+                android:layout_width="match_parent"
+                android:gravity="center"
+                android:paddingTop="8dp"
+                android:paddingBottom="8dp"
+                android:layout_height="wrap_content">
+                <Button
+                    android:id="@+id/save_pro"
+                    android:background="@drawable/save_drawable"
+                    android:text="Save"
+                    android:layout_margin="5dp"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp" />
+                <Button
+                    android:layout_margin="5dp"
+                    android:layout_toRightOf="@+id/save_pro"
+                    android:id="@+id/cancel_pro"
+                    android:textAllCaps="false"
+                    android:textColor="@color/colorWhite"
+                    android:text="Cancel"
+                    android:background="@drawable/save_drawable"
+                    android:layout_width="wrap_content"
+                    android:layout_height="38dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+
+
+</RelativeLayout>

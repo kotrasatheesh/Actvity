@@ -1,0 +1,412 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:background="@color/colorWhite"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <android.support.design.widget.AppBarLayout
+        android:id="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/ThemeOverlay.AppCompat.Dark.ActionBar">
+
+
+        <android.support.v7.widget.Toolbar
+            android:layout_marginTop="20dp"
+            android:id="@+id/detail_toolbar"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            app:titleTextAppearance="@style/Toolbar.TitleText"
+            app:layout_collapseMode="pin"
+            android:fitsSystemWindows="true"
+            app:popupTheme="@style/ThemeOverlay.AppCompat.Light" >
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+    <RelativeLayout
+        android:id="@+id/nointernet_lay"
+        android:background="@mipmap/no_internet"
+        android:layout_width="match_parent"
+        android:translationZ="3dp"
+        android:visibility="gone"
+        android:clickable="true"
+        android:layout_height="match_parent">
+        <TextView
+            android:textSize="20sp"
+            android:padding="10dp"
+            android:layout_marginBottom="30dp"
+            android:textColor="@color/colorBlack"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_above="@+id/retry"
+            android:text="No Internet Connection !"
+            android:layout_height="wrap_content" />
+        <Button
+            android:layout_alignParentBottom="true"
+            android:id="@+id/retry"
+            android:textAllCaps="false"
+            android:background="@drawable/retry"
+            android:text="Retry"
+            android:elevation="0dp"
+            android:layout_marginBottom="120dp"
+            android:textColor="@color/input"
+            android:layout_centerHorizontal="true"
+            android:layout_width="150dp"
+            android:layout_height="wrap_content" />
+        <ProgressBar
+            android:id="@+id/eprogressBar"
+            android:visibility="visible"
+            android:layout_marginBottom="90dp"
+            android:layout_alignParentBottom="true"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerInParent="true" />
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/preload"
+        android:layout_below="@+id/appbar"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:visibility="gone"
+        android:gravity="center"
+        android:translationZ="1dp"
+        android:background="@color/colorWhite">
+        <ProgressBar
+            android:id="@+id/progressBar1"
+            style="@style/Theme.Transparent"
+            android:layout_width="wrap_content"
+            android:translationZ="1dp"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp" />
+    </RelativeLayout>
+<RelativeLayout
+    android:layout_below="@+id/appbar"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/horizontalpro"
+        android:gravity="center"
+        android:layout_centerHorizontal="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/percentageprior"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/urgentper"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:text="100.100 %djkslf"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="12dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:textColor="@color/urgent"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/highper"
+                android:layout_toRightOf="@+id/urgentper"
+                android:textStyle="bold"
+                android:text="100.100 %djkslf"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/high"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/mediumper"
+                android:layout_toRightOf="@+id/highper"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="10dp"
+                android:text="100.100 %djkslf"
+                android:textSize="12sp"
+                android:textColor="@color/medium"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/lowper"
+                android:layout_toRightOf="@+id/mediumper"
+                android:textStyle="bold"
+                android:gravity="center"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="5dp"
+                android:text="50 . 83%"
+                android:textSize="12sp"
+                android:textColor="@color/low"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:id="@+id/verticalpro"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@+id/percentageprior"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <ProgressBar
+            android:id="@+id/urgent"
+            android:layout_alignParentLeft="true"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_height="110dp"
+            android:max="100"
+            android:progressDrawable="@drawable/urgentprogress" />
+        <ProgressBar
+            android:id="@+id/highprogress"
+            android:layout_toRightOf="@+id/urgent"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_height="110dp"
+            android:max="100"
+            android:progressDrawable="@drawable/highprogress" />
+
+        <ProgressBar
+            android:id="@+id/mediumprogress"
+            android:layout_toRightOf="@+id/highprogress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="25dp"
+            android:layout_height="110dp"
+            android:max="100"
+            android:progressDrawable="@drawable/mediumprogress" />
+
+        <ProgressBar
+
+            android:id="@+id/lowprogress"
+            android:layout_toRightOf="@+id/mediumprogress"
+            style="@android:style/Widget.ProgressBar.Horizontal"
+            android:layout_width="40dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:layout_height="110dp"
+            android:max="100"
+            android:progressDrawable="@drawable/lowprogress" />
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_below="@+id/verticalpro"
+            android:gravity="center"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/urgenttag"
+                android:text="Urgent"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginRight="25dp"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/higtag"
+                android:layout_toRightOf="@+id/urgenttag"
+                android:text="High"
+                android:textSize="12sp"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="25dp"
+                android:gravity="center"
+                android:textColor="@color/colorBlack"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/mediumtag"
+                android:layout_toRightOf="@+id/higtag"
+                android:text="Medium"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="25dp"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+            <TextView
+                android:id="@+id/Lowtag"
+                android:text="Low"
+                android:layout_marginTop="5dp"
+                android:layout_marginRight="5dp"
+                android:gravity="center"
+                android:layout_toRightOf="@+id/mediumtag"
+                android:textSize="12sp"
+                android:textColor="@color/colorBlack"
+                android:layout_width="50dp"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <RelativeLayout
+        android:layout_marginTop="10dp"
+        android:id="@+id/chartround"
+        android:layout_below="@+id/horizontalpro"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <com.github.mikephil.charting.charts.PieChart
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:id="@+id/chart"
+            android:layout_width="140dp"
+            android:layout_height="140dp" />
+        <RelativeLayout
+            android:layout_marginLeft="15dp"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="15dp"
+            android:layout_centerVertical="true"
+            android:id="@+id/statuslay"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/deferre"
+                android:text="Deferred"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/deferred_chart"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:layout_width="120dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_toRightOf="@+id/deferre"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/deferr"
+                android:textColor="@color/deferred"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_below="@+id/deferre"
+                android:text="Pending"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:id="@+id/pending_sts"
+                android:background="@drawable/pending_chart"
+                android:textColor="@color/colorWhite"
+                android:layout_width="120dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_below="@+id/deferre"
+                android:layout_toRightOf="@+id/pending_sts"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/pend_per"
+                android:textColor="@color/i_pending"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_below="@+id/pending_sts"
+                android:layout_marginTop="8dp"
+                android:id="@+id/started_sts"
+                android:text="Started"
+                android:background="@drawable/strted_chart"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:layout_width="120dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_below="@+id/pending_sts"
+                android:layout_toRightOf="@+id/started_sts"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:id="@+id/startd_per"
+                android:textColor="@color/i_started"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_below="@+id/started_sts"
+                android:id="@+id/completed_sts"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/closed_chart"
+                android:textColor="@color/colorWhite"
+                android:text="Closed"
+                android:gravity="center"
+                android:layout_width="120dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_below="@+id/started_sts"
+                android:layout_toRightOf="@+id/completed_sts"
+                android:gravity="center"
+                android:paddingLeft="10dp"
+                android:layout_marginTop="8dp"
+                android:id="@+id/complted_per"
+                android:textColor="@color/closed"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_below="@+id/completed_sts"
+                android:id="@+id/resolved_sts"
+                android:text="Fixed"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/fixed_chart"
+                android:textColor="@color/colorWhite"
+                android:paddingLeft="10dp"
+                android:gravity="center"
+                android:layout_width="120dp"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_below="@+id/completed_sts"
+                android:layout_toRightOf="@+id/resolved_sts"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/resolved_per"
+                android:textColor="@color/fixed"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+            <TextView
+                android:layout_below="@+id/resolved_sts"
+                android:id="@+id/reopen_sts"
+                android:text="Reopen"
+                android:layout_marginTop="8dp"
+                android:background="@drawable/reopen_chart"
+                android:textColor="@color/colorWhite"
+                android:gravity="center"
+                android:layout_width="120dp"
+                android:layout_height="30dp" />
+
+            <TextView
+                android:layout_below="@+id/resolved_sts"
+                android:layout_toRightOf="@+id/reopen_sts"
+                android:gravity="center"
+                android:layout_marginTop="8dp"
+                android:paddingLeft="10dp"
+                android:id="@+id/reop_per"
+                android:textColor="@color/i_reopend"
+                android:layout_width="wrap_content"
+                android:layout_height="30dp" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</RelativeLayout>
+</RelativeLayout>

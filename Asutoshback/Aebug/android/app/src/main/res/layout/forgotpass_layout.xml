@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:id="@+id/forgotlay"
+    android:layout_height="match_parent"
+    android:background="@color/background">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <RelativeLayout
+            android:clickable="true"
+            android:focusableInTouchMode="true"
+            android:layout_marginTop="100dp"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <RelativeLayout
+                android:id="@+id/titl"
+                android:gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+                <ImageView
+                    android:id="@+id/logo"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:src="@mipmap/ic_bug_report_white_36dp"/>
+                <TextView
+                    android:layout_toRightOf="@id/logo"
+                    android:layout_marginLeft="10dp"
+                    android:id="@+id/pNameTag"
+                    android:gravity="center"
+                    android:layout_width="wrap_content"
+                    android:layout_height="80dp"
+                    android:text="AeBug"
+                    android:textColor="@color/colorWhite"
+                    android:textSize="30sp"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/welcomLay"
+                android:layout_below="@+id/titl"
+                android:layout_width="match_parent"
+                android:gravity="left"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:layout_height="60dp">
+                <TextView
+                    android:id="@+id/frogtAskTag"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Forgot your password?"
+                    android:layout_centerVertical="true"
+                    android:textSize="18sp"
+                    android:textColor="#edf4f8"
+                    />
+                <View
+                    android:layout_alignParentBottom="true"
+                    android:layout_width="match_parent"
+                    android:layout_height="0.1dp"
+                    android:background="@color/colorWhite"></View>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_below="@+id/welcomLay"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingTop="20dp"
+                android:paddingLeft="30dp"
+                android:paddingRight="30dp"
+                android:paddingBottom="10dp"
+                android:orientation="vertical">
+
+                <EditText
+                    android:id="@+id/enterEmail"
+                    android:textColor="@color/textcolr"
+                    android:background="@drawable/edittext_input"
+                    android:padding="13dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:ems="10"
+                    android:textSize="16sp"
+                    android:textColorHint="@color/textcolr"
+                    android:hint="Enter Email ID"
+                    android:inputType="textPersonName" />
+                <Button
+                    android:layout_below="@+id/enterEmail"
+                    android:id="@+id/EmailLink"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:textAllCaps="false"
+                    android:layout_marginTop="15dp"
+                    android:layout_gravity="center_horizontal"
+                    android:background="@drawable/round_button"
+                    android:textColor="@color/colorWhite"
+                    android:padding="15dp"
+                    android:textStyle="bold"
+                    android:textSize="16sp"
+                    android:text="Submit" />
+            </RelativeLayout>
+        </RelativeLayout>
+    </ScrollView>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

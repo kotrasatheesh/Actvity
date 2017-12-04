@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/title"
+        android:padding="10dp"
+        android:background="#5585bf"
+        android:text="Choose an Action"
+        android:textColor="@color/colorWhite"
+        android:textSize="18sp"
+        android:layout_alignParentLeft="true"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:layout_below="@+id/title"
+        android:gravity="center"
+        android:background="#346096"
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <RelativeLayout
+            android:id="@+id/gallery"
+            android:layout_width="100dp"
+            android:gravity="center"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/gallery1"
+                android:layout_width="40dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/choosecam"
+                android:layout_height="40dp" />
+            <TextView
+                android:layout_below="@+id/gallery1"
+                android:text="Camera"
+                android:gravity="center"
+                android:textColor="@color/colorWhite"
+                android:layout_centerHorizontal="true"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_toRightOf="@+id/gallery"
+            android:id="@+id/document"
+            android:gravity="center"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:id="@+id/document1"
+                android:layout_width="40dp"
+                android:layout_centerHorizontal="true"
+                android:src="@mipmap/filemange"
+                android:layout_height="40dp" />
+            <TextView
+                android:text="choose file"
+                android:layout_below="@+id/document1"
+                android:textColor="@color/colorWhite"
+                android:layout_width="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:gravity="center"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

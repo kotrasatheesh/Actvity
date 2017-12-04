@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#ed4f3e</color>
+    <color name="colorPrimaryDark">#db3f30</color>
+    <color name="colorAccent">#FF4081</color>
+    <color name="blue">#4487f2</color>
+    <color name="colorBlack">#111</color>
+    <color name="colorWhite">#ffffff</color>
+    <color name="textcolr">#d9ecf9</color>
+    <color name="gray">#c6c6c6</color>
+    <color name="background">#5c97bd</color>
+    <color name="buttoncolor">#e76550</color>
+    <color name="input">#6ba3c8</color>
+    <color name="save">#e76550</color>
+    <color name="cancel">#6ba3c8</color>
+
+    <color name="i_pending">#81d4fa </color>
+    <color name="i_started">#7e57c2</color>
+    <color name="i_reopend">#ef5350</color>
+    <color name="closed">#66cc33</color>
+    <color name="fixed">#444d58</color>
+    <color name="deferred">#ff7f00</color>
+
+    <color name="urgent">#d32f2f</color>
+    <color name="high">#FF4500</color>
+    <color name="medium">#CCCC00</color>
+    <color name="low">#aeea00</color>
+
+    <color name="production">#26c6da</color>
+    <color name="acceptance">#0097a7</color>
+    <color name="developement">#1976d2</color>
+    <color name="highrep">#e67e22</color>
+    <color name="yellow">#f1c40f</color>
+
+
+    <color name="tickety">#F2784B</color>
+</resources>

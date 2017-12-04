@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/custom_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/relt"
+        android:layout_width="match_parent"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_height="wrap_content">
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/commnetID_proPic"
+        android:layout_width="34dp"
+        android:layout_height="34dp"
+        android:layout_margin="10dp"
+        android:src="@mipmap/spinder"
+        app:civ_border_width="0dp"
+        app:civ_border_color="@color/background"/>
+        <RelativeLayout
+           android:layout_marginTop="10dp"
+            android:layout_toRightOf="@+id/commnetID_proPic"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/by_name"
+            android:layout_width="220dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="Manideep Bodapti"/>
+        <TextView
+            android:layout_marginTop="2dp"
+            android:id="@+id/commentgiven"
+            android:paddingTop="5dp"
+            android:layout_below="@+id/by_name"
+            android:layout_marginLeft="10dp"
+            android:layout_width="210dp"
+            android:layout_height="wrap_content"
+            android:textSize="12sp"
+            android:text="Manideep Bodapti"/>
+        <TextView
+            android:id="@+id/commentDate"
+            android:layout_alignParentRight="true"
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:paddingRight="10dp"
+            android:gravity="right"
+            android:textSize="10sp"
+            android:text="6 days ago"/>
+        </RelativeLayout>
+    </RelativeLayout>
+</RelativeLayout>

@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:background="@drawable/custom_bg"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+    <RelativeLayout
+        android:id="@+id/activi_lay"
+        android:layout_width="match_parent"
+        android:paddingBottom="10dp"
+        android:paddingTop="10dp"
+        android:layout_height="wrap_content">
+        <TextView
+            android:id="@+id/by_name"
+            android:paddingLeft="10dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:layout_width="260dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="14sp"
+            android:text="Manideep Bodapti"/>
+        <TextView
+            android:id="@+id/projectName"
+            android:layout_below="@+id/by_name"
+            android:layout_width="260dp"
+            android:paddingLeft="10dp"
+            android:paddingBottom="2dp"
+            android:paddingTop="2dp"
+            android:layout_height="wrap_content"
+            android:textStyle="bold"
+            android:textSize="12sp"
+            android:text="Manideep Bodapti"/>
+
+            <TextView
+                android:id="@+id/Description"
+                android:paddingLeft="10dp"
+                android:paddingBottom="2dp"
+                android:paddingTop="2dp"
+                android:layout_below="@+id/projectName"
+                android:layout_width="260dp"
+                android:textColor="@color/input"
+                android:layout_height="wrap_content"
+                android:textSize="14sp"
+                android:text="Manideep Bodapti"/>
+
+            <TextView
+                android:id="@+id/When"
+                android:layout_alignParentRight="true"
+                android:layout_width="100dp"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:gravity="right"
+                android:textSize="10sp"
+                android:text="6 days ago"/>
+    </RelativeLayout>
+    <View
+        android:layout_alignParentBottom="true"
+        android:background="#eee"
+        android:layout_width="match_parent"
+        android:layout_height="8dp"></View>
+</RelativeLayout>

@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/action_settin"
+    tools:context="com.example.garima.bci.SignOut">
+        <group>
+        <item
+            android:id="@+id/action_settings1"
+            android:orderInCategory="100"
+            android:title="Sign out"
+            android:icon="@mipmap/ic_power_settings_new_white_24dp"
+            android:visible="true"
+            android:actionViewClass="android.widget.ImageButton"
+            app:showAsAction="ifRoom" />
+        </group>
+</menu>
